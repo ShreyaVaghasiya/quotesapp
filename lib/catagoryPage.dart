@@ -14,11 +14,8 @@ class Categories_Page extends StatefulWidget {
 }
 
 class _Categories_PageState extends State<Categories_Page> {
-  final dbHelper1 = DatabaseHelper1.instance;
-  String? name;
-  String? quotes;
-  List myList = [];
-  QuotesModel quotesModel = QuotesModel("", "",  null);
+
+
   @override
   @override
   void initState() {
@@ -60,23 +57,8 @@ class _Categories_PageState extends State<Categories_Page> {
         return Padding(
           padding: const EdgeInsets.all(10.0),
           child: InkWell(
-            onTap: () async {
+            onTap: ()  {
               print("Insert");
-
-              var response = await get(Uri.parse(
-                  "https://upload.wikimedia.org/wikipedia/commons/7/70/Example.png"));
-              var bytesFromPict = response.bodyBytes;
-
-              print("bytesFromPict  :::   ${bytesFromPict}");
-
-              name = "Ability";
-              quotes =
-              "Ability is what we are capable of doing";
-
-              var quotesModel = QuotesModel(
-                  name, quotes, bytesFromPict);
-              final isInserted = await dbHelper1.insert(quotesModel);
-              print('INSERT : $isInserted');
 
 
                 Navigator.pushNamed(context, 'subcategory', arguments: index);

@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 class QuotesModel {
   String? name;
   String? quotes;
-  Uint8List? pict;
+  String? pict;
 
   QuotesModel(
   this.name,

@@ -98,5 +98,6 @@ class AppUtils{
       ),
     ),
     ];
-
+  static List<Map<String,dynamic>> quoteList = [];
+  static List<Map<String,dynamic>> fvrList = [];
 }
